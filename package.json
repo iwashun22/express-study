@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "main": "nodemon main.js",
-    "second": "nodemon second.js"
+    "second": "nodemon second.js",
+    "third": "nodemon third.js"
   },
   "dependencies": {
     "express": "^4.17.1"
