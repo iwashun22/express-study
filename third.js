@@ -6,6 +6,7 @@ const app = express();
 const apiLogger = (req, res, next) => {
    const { method, url } = req;
    console.log(method, url);
+   console.log('accessing api');
    next();
 }
 
