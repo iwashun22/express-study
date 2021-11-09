@@ -1,4 +1,5 @@
 const express = require('express');
+const morgan = require('morgan'); // this is a middleware function
 const { users } = require('./data');
 const app = express();
 
@@ -17,6 +18,8 @@ app.use('/api', apiLogger);
 
 // you can also use multiple functions by put them into an array
 // app.use('path', [function1, function2, ...])
+
+app.use(morgan('tiny'));
 
 app.get('/home', (req, res) => {
    res.send('<h1>Home</h1>');
