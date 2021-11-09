@@ -9,7 +9,11 @@ app.use(express.urlencoded({ extended: false }));
 app.post('/login', (req, res) => {
    const data = req.body;
    console.log(data);
-   res.send('POST');
+
+   if(data.username){
+      return res.status(200).send(`<h1>Hello ${data.username}</h1>`);
+   }
+   res.status(401).send('<h1>User didn\'t complete the form</h1>');
 })
 
 app.listen(8000, () => {
