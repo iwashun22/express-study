@@ -15,6 +15,9 @@ const apiLogger = (req, res, next) => {
 // /home/api => not included
 app.use('/api', apiLogger);
 
+// you can also use multiple functions by put them into an array
+// app.use('path', [function1, function2, ...])
+
 app.get('/home', (req, res) => {
    res.send('<h1>Home</h1>');
 })
