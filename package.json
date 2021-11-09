@@ -6,7 +6,8 @@
   "scripts": {
     "main": "nodemon main.js",
     "second": "nodemon second.js",
-    "third": "nodemon third.js"
+    "third": "nodemon third.js",
+    "post-method": "nodemon post-method.js"
   },
   "dependencies": {
     "express": "^4.17.1",
